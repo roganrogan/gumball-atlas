@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e7ecf2">
+  <meta name="description" content="探索不思议迷宫冈布奥图鉴，查找四大阵营角色、技能、天赋、获取方式与推荐组合。">
+  <title>冈布奥图鉴大全 · 不思议迷宫</title>
+  <link rel="icon" href="assets/characters/1.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#atlas">跳转至图鉴</a>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="不思议迷宫图鉴首页"><img src="assets/characters/1.png" alt=""><span>不思议迷宫<small>GUMBALLS & DUNGEONS</small></span></a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#atlas" class="active" id="nav-atlas">冈布奥图鉴</a>
+        <a href="#combinations" id="nav-combos">推荐组合</a>
+      </nav>
+      <a class="official-link" href="https://gumballs.leiting.com/home/" target="_blank" rel="noopener">前往官网 <span data-icon="arrow-up-right"></span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> 每一只冈布奥，都有自己的冒险</div>
+        <h1 id="hero-title">小小冈布奥，<br>大大的<span class="adventure-word">不思议<span class="word-spark">✦</span></span></h1>
+        <p class="hero-subtitle">收集你的冒险伙伴，发现藏在迷宫里的无限可能。<br>从这里，开启属于你的冈布奥探索之旅。</p>
+        <div class="hero-actions"><a href="#atlas" class="primary-button">翻开冒险图鉴 <span data-icon="arrow-right"></span></a></div>
+      </div>
+      <div class="hero-art" aria-label="冈布奥冒险伙伴群像">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <svg class="journey-path" viewBox="0 0 640 470" fill="none" aria-hidden="true"><path d="M80 338C-28 189 138 70 213 145S402 390 507 285 554 55 471 82" stroke="#c3b79b" stroke-width="1.5" stroke-dasharray="5 9"/><circle cx="471" cy="82" r="5" fill="#e88b47"/></svg>
+        <div class="art-star star-one">✧</div><div class="art-star star-two">✦</div><div class="art-star star-three">✧</div>
+        <span class="art-label label-top"><span data-icon="map"></span> ADVENTURE AWAITS</span>
+        <div class="floating-card back-left"><span>魔法，是另一种想象</span><img src="assets/characters/29.png" alt="魔法师冈布奥"></div>
+        <div class="floating-card back-right"><span>为了荣耀与宝藏！</span><img src="assets/characters/2.png" alt="剑士冈布奥"></div>
+        <button class="hero-character" data-detail="1" aria-label="查看冒险者冈布奥"><span class="hero-character-circle"></span><img src="assets/characters/1.png" alt="冒险者冈布奥"><span class="character-sticker"><b>冒险者</b><span>你的第一位冒险伙伴 <span>↗</span></span></span></button>
+        <div class="art-stamp"><span data-icon="compass"></span><span>探索 · 收集 · 相遇</span></div>
+        <div class="art-caption">THE ADVENTURER’S FIELD GUIDE <span>VOL. 01</span></div>
+      </div>
+    </section>
+
+
+    <section class="atlas wrap" id="atlas" aria-labelledby="atlas-title">
+      <div class="section-heading"><div><div class="small-label">THE GUMBALL COLLECTION</div><h2 id="atlas-title">冈布奥图鉴 <span class="title-mark">大全</span></h2></div><p>认识每一位伙伴，组建你的梦幻冒险小队。</p></div>
+      <div class="atlas-layout">
+        <aside class="sidebar" aria-label="图鉴筛选">
+          <div class="sidebar-heading"><span data-icon="flag"></span> 选择阵营 <span class="tiny-label">FACTIONS</span></div>
+          <div class="camp-options" id="camp-options"></div>
+          <div class="field-note"><span class="note-pin"></span><div class="note-title"><span data-icon="lightbulb"></span> 冒险小贴士</div><p>不同阵营各有所长，点击冈布奥，看看它的独特技能与获取方式吧。</p><span class="note-scribble">新的伙伴，新的可能 ↗</span></div>
+          <a href="#combinations" class="sidebar-combo"><span data-icon="users"></span><span>搭配灵感不够？<b>看看推荐组合 <span>→</span></b></span></a>
+        </aside>
+
+        <div class="catalog">
+          <div class="catalog-toolbar"><label class="search-box"><span data-icon="search"></span><input id="search" type="search" placeholder="搜索冈布奥名称、技能或获取方式…" aria-label="搜索冈布奥"><kbd>/</kbd></label><button class="reset-button" id="reset-filters" title="重置全部筛选" aria-label="重置全部筛选"><span data-icon="sliders"></span></button></div>
+          <div class="catalog-controls"><div class="type-tabs" id="type-tabs" role="group" aria-label="选择系别"><button data-type="" class="active">全部系别</button><button data-type="战斗系"><span data-icon="swords"></span>战斗系</button><button data-type="魔法系"><span data-icon="wand"></span>魔法系</button><button data-type="冒险系"><span data-icon="compass"></span>冒险系</button></div></div>
+          <div class="results-line"><span id="result-description" aria-live="polite">正在翻开冒险手册…</span><span class="view-hint"><span data-icon="grid"></span> 点击卡片，了解更多</span></div>
+          <div class="character-grid" id="character-grid" aria-busy="true"></div>
+          <div class="empty-state" id="empty-state" hidden><span data-icon="search"></span><h3>这位伙伴还藏在迷宫里</h3><p>试试其他关键词，或放宽筛选条件。</p><button class="primary-button" id="empty-reset">查看全部冈布奥 <span>→</span></button></div>
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="combinations-section wrap" id="combinations" aria-labelledby="combos-title">
+      <div class="section-heading"><h2 id="combos-title">推荐组合</h2></div>
+      <div class="combo-grid" id="combo-grid"></div>
+    </section>
+  </main>
+  <footer class="copyright-footer" aria-label="版权与备案信息">
+    <div class="copyright-inner">
+      <div class="copyright-top">
+        <div class="copyright-logos">
+          <a href="https://www.g-bits.com/" target="_blank" rel="noopener"><img src="assets/footer/g-bits.png" alt="吉比特"></a>
+          <span class="copyright-logo-divider" aria-hidden="true"></span>
+          <a href="https://www.leiting.com/" target="_blank" rel="noopener"><img src="assets/footer/leiting.png" alt="雷霆游戏"></a>
+        </div>
+        <nav class="copyright-nav" aria-label="政策与服务">
+          <a href="https://www.leiting.com/terrace/news/news_detail_ff80808171a5bad00171a64e53870006.html" target="_blank" rel="noopener">隐私政策</a>
+          <a href="https://game.leiting.com/" target="_blank" rel="noopener">雷霆游戏平台</a>
+          <a href="https://www.leiting.com/terrace/news/news_detail_ff8080816f6510d4016f9e532924003e.html" target="_blank" rel="noopener">用户协议</a>
+          <a href="https://www.leiting.com/terrace/news/news_detail_ff8080817c12222b017c210d125d0003.html" target="_blank" rel="noopener">防沉迷自律公约</a>
+          <a href="https://helper.leiting.com/parentsAccompany/reportView.do" target="_blank" rel="noopener">未成年专项举报</a>
+        </nav>
+      </div>
+      <div class="copyright-info">
+        <p class="healthy-gaming">健康游戏忠告：抵制不良游戏　拒绝盗版游戏　注意自我保护　谨防受骗上当　适度游戏益脑　沉迷游戏伤身　合理安排时间　享受健康生活</p>
+        <p>互联网违法和不良信息举报邮箱:gmtousu@leiting.com | 互联网违法和不良信息举报电话:0592-3285177(此专线仅受理举报类问题，其余问题请联系在线客服处理)</p>
+        <ul class="copyright-licenses" aria-label="运营许可与出版信息">
+          <li>ICP证闽B2-20130030</li><li>ICP证粤B2-20221395</li><li>(署)网出证(闽)字第019号</li>
+          <li><a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener">闽ICP备12001243号-4</a></li>
+          <li>ISBN 978-7-7979-5309-2</li><li>新广出审[2017]1799号</li><li>文网游备字【2017】M-RPG 0187</li>
+        </ul>
+        <p>Copyright© 2004-2026 <a href="https://www.g-bits.com/" target="_blank" rel="noopener">吉比特</a> <a href="https://www.leiting.com/" target="_blank" rel="noopener">雷霆游戏</a></p>
+        <p><a class="copyright-security" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35020302001361" target="_blank" rel="noopener"><img src="assets/footer/public-security.png" alt="公安部备案标识">闽公网安备 35020302001361号</a></p>
+      </div>
+    </div>
+  </footer>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close" id="dialog-close" aria-label="关闭详情"><span data-icon="x"></span></button><div id="detail-content"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
